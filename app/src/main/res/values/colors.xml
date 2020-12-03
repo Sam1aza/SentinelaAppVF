@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#484848</color>
+    <color name="fundo_branco">#FFF</color>
+    <color name="botao_logar">#43a047</color>
+    <color name="botao_cadastrar">#f9a825</color>
+    <color name="botao_medic">#212121</color>
+</resources>

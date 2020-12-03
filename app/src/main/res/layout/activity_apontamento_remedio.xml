@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Apontamento_remedio">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Quais os medicamentos que foram ingeridos?"
+                android:textSize="32dp" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_carbamazepina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Carbamazepina M/N" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_risperidona"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Risperidona M/N" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_Brilinta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Brilinta M/N" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_Losartana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Losartana (Aradois) M/N" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_Concor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Concor M" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_Zimpas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Zimpas (Rosuvastatina) M" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_Lasix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Lasix M" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_AAS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="AAS T" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_Aldactone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Aldactone T" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_Ancorom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Ancorom T" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/botao_logar"
+                android:textColor="@color/fundo_branco"
+                android:text="SALVAR"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

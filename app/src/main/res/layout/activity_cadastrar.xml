@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Cadastrar">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:text="Cadastrar Usuario"
+                android:textColor="@color/fundo_branco"
+                android:textSize="54dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="32dp"
+                android:textColorHint="@color/fundo_branco">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_nomec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nome"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/fundo_branco"
+                    android:textColorHint="@color/fundo_branco" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtlay_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="32dp"
+                android:textColorHint="@color/fundo_branco">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_emailc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email para cadastro"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/fundo_branco"
+                    android:textColorHint="@color/fundo_branco" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="32dp"
+                android:textColorHint="@color/fundo_branco"
+
+                app:passwordToggleEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_passwdc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:hint="Senha para realizar login"
+                    android:inputType="textPassword"
+                    android:outlineAmbientShadowColor="@color/fundo_branco"
+                    android:outlineSpotShadowColor="@color/fundo_branco"
+                    android:textColor="@color/fundo_branco"
+                    android:textColorHighlight="@color/fundo_branco"
+                    android:textColorHint="@color/fundo_branco" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="32dp"
+                android:textColorHint="@color/fundo_branco"
+
+                app:passwordToggleEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_reppasswc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Repita a senha para login"
+                    android:inputType="textPassword"
+                    android:outlineAmbientShadowColor="@color/fundo_branco"
+                    android:outlineSpotShadowColor="@color/fundo_branco"
+                    android:textColor="@color/fundo_branco"
+                    android:textColorHighlight="@color/fundo_branco"
+                    android:textColorHint="@color/fundo_branco" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_realizarcadastro"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/botao_cadastrar"
+                android:textStyle="bold"
+                android:text="REALIZAR O CADASTRO">
+            </Button>
+
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    </ScrollView>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
