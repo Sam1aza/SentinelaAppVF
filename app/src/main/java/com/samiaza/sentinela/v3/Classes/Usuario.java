@@ -22,7 +22,7 @@ public class Usuario {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        Usuario.nome = nome;
     }
 
     public String getEmail() {

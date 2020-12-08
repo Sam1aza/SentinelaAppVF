@@ -1,79 +1,42 @@
 {
   "project_info": {
-    "project_number": "666240249729",
-    "firebase_url": "https://sentinela-b5291.firebaseio.com",
-    "project_id": "sentinela-b5291",
-    "storage_bucket": "sentinela-b5291.appspot.com"
+    "project_number": "109578723185",
+    "firebase_url": "https://sentinelav3.firebaseio.com",
+    "project_id": "sentinelav3",
+    "storage_bucket": "sentinelav3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:666240249729:android:a3d4f120b5e603aa194280",
-        "android_client_info": {
-          "package_name": "com.samiaza.sentinela.v1_2"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "666240249729-na0nt2nlqvsj4fc60i09l59dcm2je4vv.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.samiaza.sentinela.v1_2",
-            "certificate_hash": "4d81dc2d979782a10e10935720d1752eb4be9eb7"
-          }
-        },
-        {
-          "client_id": "666240249729-er55ruf9hlob49sqc2m0fd6fi7d42cgd.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDHOSYM5kOnBoIcLeweclOKlZtOvgrVFXE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "666240249729-er55ruf9hlob49sqc2m0fd6fi7d42cgd.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:666240249729:android:1622200912bb5f18194280",
+        "mobilesdk_app_id": "1:109578723185:android:137d0dce977ffff014e0d0",
         "android_client_info": {
           "package_name": "com.samiaza.sentinela.v3"
         }
       },
       "oauth_client": [
         {
-          "client_id": "666240249729-u1ok7258ucc9barkcucuhu8j6qfbnmk7.apps.googleusercontent.com",
+          "client_id": "109578723185-l3cqo63q0bqlo9kkn6rchepq8ck2h8id.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.samiaza.sentinela.v3",
-            "certificate_hash": "4d81dc2d979782a10e10935720d1752eb4be9eb7"
+            "certificate_hash": "c60fb8fa8feadbfa87943a583726ec60788a8e4f"
           }
         },
         {
-          "client_id": "666240249729-er55ruf9hlob49sqc2m0fd6fi7d42cgd.apps.googleusercontent.com",
+          "client_id": "109578723185-76tak325301jpum9a4i0bvk8fes686jv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDHOSYM5kOnBoIcLeweclOKlZtOvgrVFXE"
+          "current_key": "AIzaSyCnFZVWwAyVut3B5vOR56Z08Jgcz2kKsmA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "666240249729-er55ruf9hlob49sqc2m0fd6fi7d42cgd.apps.googleusercontent.com",
+              "client_id": "109578723185-76tak325301jpum9a4i0bvk8fes686jv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

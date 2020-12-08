@@ -165,25 +165,8 @@
                     android:text="SALVAR"
                     android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/btn_tirarFoto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:text="FOTO"/>
-
 
             </LinearLayout>
-
-
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/img_foto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginRight="50dp"
-                android:fitsSystemWindows="true" />
 
 
         </LinearLayout>

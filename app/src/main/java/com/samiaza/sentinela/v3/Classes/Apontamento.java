@@ -1,32 +1,31 @@
 package com.samiaza.sentinela.v3.Classes;
 
-import java.text.DateFormat;
 
 public class Apontamento {
 
-    private String glicemia;
-    private String pressaoArterial;
+    private String glicose;
+    private String pressao;
     private String batimento;
-    private String dataApontamento;
-    private String horaApontamento;
+    private String data;
+    private String hora;
     private String Observacao;
     private String keyApontamento;
     private String uid;
 
-    public String getGlicemia() {
-        return glicemia;
+    public String getGlicose() {
+        return glicose;
     }
 
-    public void setGlicemia(String glicemia) {
-        this.glicemia = glicemia;
+    public void setGlicose(String glicose) {
+        this.glicose = glicose;
     }
 
-    public String getPressaoArterial() {
-        return pressaoArterial;
+    public String getPressao() {
+        return pressao;
     }
 
-    public void setPressaoArterial(String pressaoArterial) {
-        this.pressaoArterial = pressaoArterial;
+    public void setPressao(String pressao) {
+        this.pressao = pressao;
     }
 
     public String getBatimento() {
@@ -37,28 +36,20 @@ public class Apontamento {
         this.batimento = batimento;
     }
 
-    public String getDataApontamento() {
-        return dataApontamento;
+    public String getData() {
+        return data;
     }
 
-    public String getUid() {
-        return uid;
+    public void setData(String data) {
+        this.data = data;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public String getHora() {
+        return hora;
     }
 
-    public void setDataApontamento(String dataApontamento) {
-        this.dataApontamento = dataApontamento;
-    }
-
-    public String getHoraApontamento() {
-        return horaApontamento;
-    }
-
-    public void setHoraApontamento(String horaApontamento) {
-        this.horaApontamento = horaApontamento;
+    public void setHora(String hora) {
+        this.hora = hora;
     }
 
     public String getObservacao() {
@@ -69,7 +60,6 @@ public class Apontamento {
         Observacao = observacao;
     }
 
-
     public String getKeyApontamento() {
         return keyApontamento;
     }
@@ -78,5 +68,11 @@ public class Apontamento {
         this.keyApontamento = keyApontamento;
     }
 
+    public String getUid() {
+        return uid;
+    }
 
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
 }

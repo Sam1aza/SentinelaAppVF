@@ -17,7 +17,7 @@ import java.util.List;
 
 public class RecyclerAdapter_Pressao extends RecyclerView.Adapter<RecyclerAdapter_Pressao.ViewHolder> {
 
-    private List<Apontamento> mApontamentoList;
+    private final List<Apontamento> mApontamentoList;
     private Context context;
 
 
@@ -44,10 +44,10 @@ public class RecyclerAdapter_Pressao extends RecyclerView.Adapter<RecyclerAdapte
 
         Apontamento item = mApontamentoList.get(position);
 
-        holder.title.setText(item.getPressaoArterial());
+        holder.title.setText(item.getPressao());
         holder.title2.setText(item.getBatimento());
-        holder.descricao.setText(item.getDataApontamento());
-        holder.descricao2.setText(item.getHoraApontamento());
+        holder.descricao.setText(item.getData());
+        holder.descricao2.setText(item.getHora());
         holder.descricao3.setText(item.getObservacao());
     }
 
@@ -63,13 +63,12 @@ public class RecyclerAdapter_Pressao extends RecyclerView.Adapter<RecyclerAdapte
         protected TextView descricao;
         protected TextView descricao2;
         protected TextView descricao3;
-        protected ImageView featuredImage;
+
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            /*featuredImage = itemView.findViewById(R.id.imgv_featured);*/
             title = itemView.findViewById(R.id.txtv_titleP);
             title2 = itemView.findViewById(R.id.txtv_title2P);
             descricao = itemView.findViewById(R.id.txtv_subtitleP);

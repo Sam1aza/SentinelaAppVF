@@ -49,7 +49,6 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.samiaza.sentinela.v3.Classes.Usuario;
 import com.samiaza.sentinela.v3.helper.Medicamento_helper;
-import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -68,14 +67,8 @@ import java.util.concurrent.atomic.AtomicMarkableReference;
 
 public class Apontamento<medicamentos, getListamedicao> extends AppCompatActivity {
 
-    private Button btnDarMedicacao;
-    private AlertDialog alertDialog;
-
-    private ImageView imageView;
-
 
     private Button salvarApontamento;
-    private Button tirarFoto;
     private EditText apontInsulina;
     private EditText apontPressao;
     private EditText apontBatimento;
@@ -133,16 +126,6 @@ public class Apontamento<medicamentos, getListamedicao> extends AppCompatActivit
 
 
 
-        imageView = findViewById(R.id.img_foto);
-
-        tirarFoto = findViewById(R.id.btn_tirarFoto);
-        tirarFoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selecionarPhoto();
-            }
-        });
-
         dataApont = findViewById(R.id.txv_Data);
         horaApont = findViewById(R.id.txv_Hora);
         dataApont.setText(currentData);
@@ -169,10 +152,10 @@ public class Apontamento<medicamentos, getListamedicao> extends AppCompatActivit
                             .setAction("Descartar", null).show();
                 } else {
                     apontamento = new com.samiaza.sentinela.v3.Classes.Apontamento();
-                    apontamento.setDataApontamento(dataApont.getText().toString());
-                    apontamento.setHoraApontamento(horaApont.getText().toString());
-                    apontamento.setGlicemia(apontInsulina.getText().toString());
-                    apontamento.setPressaoArterial(apontBatimento.getText().toString());
+                    apontamento.setData(dataApont.getText().toString());
+                    apontamento.setHora(horaApont.getText().toString());
+                    apontamento.setGlicose(apontInsulina.getText().toString());
+                    apontamento.setPressao(apontBatimento.getText().toString());
                     apontamento.setBatimento(apontPressao.getText().toString());
                     apontamento.setObservacao(obsApontamento.getText().toString());
                     inserirApontamentoDatabase(apontamento);
@@ -184,7 +167,7 @@ public class Apontamento<medicamentos, getListamedicao> extends AppCompatActivit
 
 
     private void inserirApontamentoDatabase(com.samiaza.sentinela.v3.Classes.Apontamento apontamento) {
-        myRef = database.getReference("Monitoramento");
+        myRef = database.getReference("apontamentos");
         String key = myRef.child("apontamento").push().getKey();
         myRef.child(key).setValue(apontamento);
         Toast.makeText(Apontamento.this,
@@ -208,38 +191,6 @@ public class Apontamento<medicamentos, getListamedicao> extends AppCompatActivit
     }
 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (uri != null) {
-            String filename = "teste";
-            final StorageReference ref = FirebaseStorage.getInstance().getReference("/images/" + filename);
-            ref.putFile(uri)
-                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                @Override
-                                public void onSuccess(Uri uri) {
-                                    Log.i("Teste", uri.toString());
-                                }
-                            });
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Log.e("teste", e.getMessage(), e);
-                }
-            });
-        }
-    }
-
-    private void selecionarPhoto() {
-        Intent intent = new Intent(Intent.ACTION_PICK);
-        intent.setType("image/*");
-        startActivityForResult(intent, 0);
-
-    }
 
     private void obterUsuario(){
 
@@ -254,8 +205,6 @@ public class Apontamento<medicamentos, getListamedicao> extends AppCompatActivit
         }
 
 
-
-        myRef = FirebaseDatabase.getInstance().getReference("Usuarios");
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override

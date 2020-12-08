@@ -17,7 +17,7 @@ import java.util.List;
 
 public class RecyclerAdapter_Glicose extends RecyclerView.Adapter<RecyclerAdapter_Glicose.ViewHolder> {
 
-    private List<com.samiaza.sentinela.v3.Classes.Apontamento> mApontamentoList;
+    private final List<com.samiaza.sentinela.v3.Classes.Apontamento> mApontamentoList;
     private Context context;
 
 
@@ -41,12 +41,10 @@ public class RecyclerAdapter_Glicose extends RecyclerView.Adapter<RecyclerAdapte
 
     @Override
     public void onBindViewHolder(final RecyclerAdapter_Glicose.ViewHolder holder, int position) {
-
         Apontamento item = mApontamentoList.get(position);
-
-        holder.title.setText(item.getGlicemia());
-        holder.descricao.setText(item.getDataApontamento());
-        holder.descricao2.setText(item.getHoraApontamento());
+        holder.title.setText(item.getGlicose());
+        holder.descricao.setText(item.getData());
+        holder.descricao2.setText(item.getHora());
         holder.descricao3.setText(item.getObservacao());
     }
 
@@ -61,13 +59,10 @@ public class RecyclerAdapter_Glicose extends RecyclerView.Adapter<RecyclerAdapte
         protected TextView descricao;
         protected TextView descricao2;
         protected TextView descricao3;
-        protected ImageView featuredImage;
-
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            /*featuredImage = itemView.findViewById(R.id.imgv_featured);*/
             title = itemView.findViewById(R.id.txtv_title);
             descricao = itemView.findViewById(R.id.txtv_subtitle);
             descricao2 = itemView.findViewById(R.id.txtv_subtitle2);

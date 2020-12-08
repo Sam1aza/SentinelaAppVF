@@ -49,8 +49,8 @@ public class Glicose extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
         ValueEventListener valueEventListener = databaseReference
-                .child("Monitoramento")
-                .orderByChild("dataApontamento")
+                .child("apontamentos")
+
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
