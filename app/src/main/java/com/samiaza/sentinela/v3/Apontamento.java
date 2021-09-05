@@ -102,6 +102,8 @@ public class Apontamento<medicamentos, getListamedicao> extends AppCompatActivit
 
     private Uri uri;
 
+    private static final String TAG = "MyActivity";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,13 +111,13 @@ public class Apontamento<medicamentos, getListamedicao> extends AppCompatActivit
         setContentView(R.layout.activity_apontamento);
         database = FirebaseDatabase.getInstance();
         mSorage = FirebaseStorage.getInstance().getReference();
-
-
-
-        textoUsuario = findViewById(R.id.nome_logado);
-        textoUsuario.setText(UsuarioTextView);
-
-
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            String name = user.getDisplayName();
+            Log.i("Teste",name);
+            textoUsuario = findViewById(R.id.nome_logado);
+            textoUsuario.setText(name);
+        }
 
         mProgress = new ProgressDialog(this);
 
@@ -123,9 +125,6 @@ public class Apontamento<medicamentos, getListamedicao> extends AppCompatActivit
         Calendar calendar = Calendar.getInstance();
         String currentData = DateFormat.getDateInstance(DateFormat.DATE_FIELD).format(calendar.getTime());
         String currentHour = DateFormat.getTimeInstance().format(calendar.getTime());
-
-
-
         dataApont = findViewById(R.id.txv_Data);
         horaApont = findViewById(R.id.txv_Hora);
         dataApont.setText(currentData);
@@ -158,6 +157,7 @@ public class Apontamento<medicamentos, getListamedicao> extends AppCompatActivit
                     apontamento.setPressao(apontBatimento.getText().toString());
                     apontamento.setBatimento(apontPressao.getText().toString());
                     apontamento.setObservacao(obsApontamento.getText().toString());
+                    apontamento.setUsuario(textoUsuario.getText().toString());
                     inserirApontamentoDatabase(apontamento);
                 }
             }
@@ -193,15 +193,11 @@ public class Apontamento<medicamentos, getListamedicao> extends AppCompatActivit
 
 
     private void obterUsuario(){
-
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             String name = user.getDisplayName();
-            String email = user.getEmail();
-            boolean emailVerified = user.isEmailVerified();
-            String uid = user.getUid();
-            usuarioLog = email;
-            UsuarioTextView = name;
+            Log.i("Teste",name);
+            //UsuarioTextView = name;
         }
 
 

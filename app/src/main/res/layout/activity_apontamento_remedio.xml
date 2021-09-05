@@ -109,6 +109,7 @@
                 android:layout_gravity="center"
                 android:backgroundTint="@color/botao_logar"
                 android:textColor="@color/fundo_branco"
+                android:id="@+id/btn_salvarRemed"
                 android:text="SALVAR"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>

@@ -6,6 +6,7 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:layout_height="match_parent">
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toobar"
         android:layout_width="match_parent"
@@ -13,12 +14,178 @@
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="100dp">
+            <TableRow>
+                <TextView
+                    android:text="Medicação"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Dosagem"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Periodo"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Carbamazepina"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="200 Mlg"
+                    android:gravity="right"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="12 horas"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Risperidona"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="1 Mlg"
+                    android:gravity="right"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="12 horas"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Brilinta"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="90 Mlg"
+                    android:gravity="right"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="12 horas"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Losartana"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="25 Mlg"
+                    android:gravity="right"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="12 horas"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Concor"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="2,5 Mlg"
+                    android:gravity="right"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="24 horas"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Zimpass"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="10 Mlg"
+                    android:gravity="right"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="24 horas"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Lasix"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="40 Mlg"
+                    android:gravity="right"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="24 horas"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="AAS"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="100 Mlg"
+                    android:gravity="right"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="24 horas"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Aldactone"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="25 Mlg"
+                    android:gravity="right"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="24 horas"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Ancorom"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="200 Mlg"
+                    android:gravity="right"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="24 horas"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>            <TableRow>
+            <TextView
+                android:text="Revisado em 10/02/2019"
+                android:textSize="10dp"
+                android:padding="3dip" />
+        </TableRow>
+            
+
+
+        </TableLayout>
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:orientation="vertical"
->
+        android:orientation="vertical">
+
+
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabmed"
@@ -26,7 +193,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:layout_gravity="bottom|end"
-            app:srcCompat="@drawable/ic_attachment" />
+            app:srcCompat="@drawable/ic_baseline_assignment_turned_in_24" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
@@ -34,7 +201,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:layout_gravity="bottom|end"
-            app:srcCompat="@drawable/ic_file_upload" />
+            app:srcCompat="@drawable/ic_baseline_health_and_safety_24" />
+
+
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>

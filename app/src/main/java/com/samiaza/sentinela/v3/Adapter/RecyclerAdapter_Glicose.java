@@ -46,6 +46,7 @@ public class RecyclerAdapter_Glicose extends RecyclerView.Adapter<RecyclerAdapte
         holder.descricao.setText(item.getData());
         holder.descricao2.setText(item.getHora());
         holder.descricao3.setText(item.getObservacao());
+        holder.descricao4.setText(item.getUsuario());
     }
 
     @Override
@@ -59,6 +60,7 @@ public class RecyclerAdapter_Glicose extends RecyclerView.Adapter<RecyclerAdapte
         protected TextView descricao;
         protected TextView descricao2;
         protected TextView descricao3;
+        protected TextView descricao4;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -67,6 +69,7 @@ public class RecyclerAdapter_Glicose extends RecyclerView.Adapter<RecyclerAdapte
             descricao = itemView.findViewById(R.id.txtv_subtitle);
             descricao2 = itemView.findViewById(R.id.txtv_subtitle2);
             descricao3 = itemView.findViewById(R.id.txtv_subtitle3);
+            descricao4 = itemView.findViewById(R.id.txtv_subtitle4);
         }
     }
 }

@@ -8,26 +8,4 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:background="@drawable/background">
 
-    <ImageView
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/ic_face"/>
-
-    <TextView
-        android:id="@+id/txtv_nomeusuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wallisson Salatiel"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:layout_marginTop="8dp"/>
-
-    <TextView
-        android:id="@+id/txtv_emailusuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="wallisson.salatiel@gmail.com"/>
-
-
 </LinearLayout>

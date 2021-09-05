@@ -50,7 +50,7 @@ public class PressaoCardiaca extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
         ValueEventListener valueEventListener = databaseReference
-                .child("apontamentos")
+                .child("apontamentos").limitToLast(50)
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -59,6 +59,7 @@ public class PressaoCardiaca extends AppCompatActivity {
                             apontamento = apontamentosSnapshot.getValue(Apontamento.class);
                             list.add(apontamento);
                         }
+                        java.util.Collections.reverse(list);
                         adapter.notifyDataSetChanged();
                     }
 

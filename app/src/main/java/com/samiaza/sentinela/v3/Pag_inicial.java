@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,8 +19,10 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.FirebaseDatabase;
-
+import com.samiaza.sentinela.v3.Classes.ApontamentoMedicacao;
 
 
 public class Pag_inicial extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -30,10 +33,9 @@ public class Pag_inicial extends AppCompatActivity implements NavigationView.OnN
     private FloatingActionButton floatingActionButton;
 
     private TextView nomeLogado;
-    private TextView emailLogado;
 
     private FirebaseAuth autenticacao;
-    private FirebaseDatabase database;
+    private FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +44,13 @@ public class Pag_inicial extends AppCompatActivity implements NavigationView.OnN
 
         autenticacao = FirebaseAuth.getInstance();
 
-        nomeLogado = findViewById(R.id.txtv_nomeusuario);
-        emailLogado = findViewById(R.id.txtv_emailusuario);
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            String name = user.getDisplayName();
+            Log.i("Teste",name);
+            //nomeLogado = findViewById(R.id.txtv_nomeusuario);
+            //nomeLogado.setText(name);
+        }
 
 
         floatingActionButton = findViewById(R.id.fab);
@@ -117,6 +124,10 @@ public class Pag_inicial extends AppCompatActivity implements NavigationView.OnN
                 abrirPressao();
                 break;
             }
+            case R.id.nav_medicacao:{
+                abrirMedicacaoEstoque();
+                break;
+            }
 
         }
         drawerLayout.closeDrawer(GravityCompat.START);
@@ -148,6 +159,11 @@ public class Pag_inicial extends AppCompatActivity implements NavigationView.OnN
 
     private void abrirPressao(){
         Intent intent = new Intent(Pag_inicial.this, PressaoCardiaca.class);
+        startActivity(intent);
+    }
+
+    private void abrirMedicacaoEstoque(){
+        Intent intent = new Intent(Pag_inicial.this, MedicamentoEstoque.class);
         startActivity(intent);
     }
 

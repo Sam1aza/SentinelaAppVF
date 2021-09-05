@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="8dp"
                 android:text="Batimento :"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
                 android:id="@+id/txtv_title2P"
@@ -64,7 +64,7 @@
                 android:id="@+id/txtv_subtitleP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="1dp"
                 android:text="SubTitulo do post"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -82,7 +82,7 @@
                 android:id="@+id/txtv_subtitle2P"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="1dp"
                 android:text="SubTitulo do post"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -92,14 +92,31 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:paddingRight="8dp"
-                android:text="Observação"
+                android:text="Observação:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
             <TextView
                 android:id="@+id/txtv_subtitle3P"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:paddingBottom="8dp"
+                android:text="SubTitulo do post"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:paddingRight="8dp"
+                android:text="Medido por:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+            <TextView
+                android:id="@+id/txtv_subtitle4P"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
                 android:paddingBottom="8dp"
                 android:text="SubTitulo do post"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />

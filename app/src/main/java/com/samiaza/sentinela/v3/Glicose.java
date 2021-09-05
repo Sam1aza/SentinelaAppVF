@@ -1,12 +1,14 @@
 package com.samiaza.sentinela.v3;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -39,18 +41,17 @@ public class Glicose extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         popularListaInjetaveis();
 
-
     }
 
     private void popularListaInjetaveis(){
         recyclerView.setHasFixedSize(true);
         /*mLinearLayout = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);*/
+
         list = new ArrayList<>();
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
         ValueEventListener valueEventListener = databaseReference
-                .child("apontamentos")
-
+                .child("apontamentos").limitToLast(50)
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -59,6 +60,7 @@ public class Glicose extends AppCompatActivity {
                             apontamento = apontamentosSnapshot.getValue(Apontamento.class);
                             list.add(apontamento);
                         }
+                        java.util.Collections.reverse(list);
                         adapter.notifyDataSetChanged();
                     }
 
@@ -72,4 +74,5 @@ public class Glicose extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
     }
+
 }

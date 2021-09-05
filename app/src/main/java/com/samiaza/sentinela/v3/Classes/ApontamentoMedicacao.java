@@ -1,95 +1,96 @@
 package com.samiaza.sentinela.v3.Classes;
 
 public class ApontamentoMedicacao {
+    private int carbamazepina;
+    private int risperidona;
+    private int brilinta;
+    private int aldactone;
+    private int aas;
+    private int anccorom;
+    private int concor;
+    private int lasix;
+    private int losartana;
+    private int zimpass;
 
-    String Carbamazepina;
-    String Risperidona;
-    String Brilinta;
-    String Losartana;
-    String Concor;
-    String Zimpas;
-    String Lasix;
-    String AAS;
-    String Aldactone;
-    String Ancorom;
 
-    public String getCarbamazepina() {
-        return Carbamazepina;
+    public int getCarbamazepina() {
+        return carbamazepina;
     }
 
-    public void setCarbamazepina(String carbamazepina) {
-        Carbamazepina = carbamazepina;
+    public void setCarbamazepina(int carbamazepina) {
+        this.carbamazepina = carbamazepina;
     }
 
-    public String getRisperidona() {
-        return Risperidona;
+    public int getRisperidona() {
+        return risperidona;
     }
 
-    public void setRisperidona(String risperidona) {
-        Risperidona = risperidona;
+    public void setRisperidona(int risperidona) {
+        this.risperidona = risperidona;
     }
 
-    public String getBrilinta() {
-        return Brilinta;
+    public int getBrilinta() {
+        return brilinta;
     }
 
-    public void setBrilinta(String brilinta) {
-        Brilinta = brilinta;
+    public void setBrilinta(int brilinta) {
+        this.brilinta = brilinta;
     }
 
-    public String getLosartana() {
-        return Losartana;
+    public int getAldactone() {
+        return aldactone;
     }
 
-    public void setLosartana(String losartana) {
-        Losartana = losartana;
+    public void setAldactone(int aldactone) {
+        this.aldactone = aldactone;
     }
 
-    public String getConcor() {
-        return Concor;
+    public int getAas() {
+        return aas;
     }
 
-    public void setConcor(String concor) {
-        Concor = concor;
+    public void setAas(int aas) {
+        this.aas = aas;
     }
 
-    public String getZimpas() {
-        return Zimpas;
+    public int getAnccorom() {
+        return anccorom;
     }
 
-    public void setZimpas(String zimpas) {
-        Zimpas = zimpas;
+    public void setAnccorom(int anccorom) {
+        this.anccorom = anccorom;
     }
 
-    public String getLasix() {
-        return Lasix;
+    public int getConcor() {
+        return concor;
     }
 
-    public void setLasix(String lasix) {
-        Lasix = lasix;
+    public void setConcor(int concor) {
+        this.concor = concor;
     }
 
-    public String getAAS() {
-        return AAS;
+    public int getLasix() {
+        return lasix;
     }
 
-    public void setAAS(String AAS) {
-        this.AAS = AAS;
+    public void setLasix(int lasix) {
+        this.lasix = lasix;
     }
 
-    public String getAldactone() {
-        return Aldactone;
+    public int getLosartana() {
+        return losartana;
     }
 
-    public void setAldactone(String aldactone) {
-        Aldactone = aldactone;
+    public void setLosartana(int losartana) {
+        this.losartana = losartana;
     }
 
-    public String getAncorom() {
-        return Ancorom;
+    public int getZimpass() {
+        return zimpass;
     }
 
-    public void setAncorom(String ancorom) {
-        Ancorom = ancorom;
+    public void setZimpass(int zimpass) {
+        this.zimpass = zimpass;
     }
 }
+

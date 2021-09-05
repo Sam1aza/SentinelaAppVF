@@ -20,6 +20,7 @@
             android:id="@+id/nav_medicacao"
             android:icon="@drawable/ic_medicamento"
             android:title="Medicação" />
+
     </group>
 
 </menu>

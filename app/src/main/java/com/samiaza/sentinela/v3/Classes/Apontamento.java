@@ -10,7 +10,7 @@ public class Apontamento {
     private String hora;
     private String Observacao;
     private String keyApontamento;
-    private String uid;
+    private String usuario;
 
     public String getGlicose() {
         return glicose;
@@ -68,11 +68,11 @@ public class Apontamento {
         this.keyApontamento = keyApontamento;
     }
 
-    public String getUid() {
-        return uid;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 }
